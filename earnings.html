@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="bodyIndex">
+		<div class="scorePanel">
+			<div class="topScorPanel">
+				<div class="energy">
+					<img src="icons8-энергия-48.png" />
+					<div id="energyBox">
+						<div id="energyFill"></div>
+						<span id="energyText">500</span>
+					</div>
+				</div>
+			</div>
+			<div class="centreScorePanel">
+				<img src="icons8-евро-64.png" alt="" />
+				<span id="score">0</span>
+			</div>
+			<div class="bottomScorePanel">
+				<p>+ <span id="scoreInHour">0</span> в час</p>
+			</div>
+		</div>
+		<div class="cardsPanel">
+			<div class="upgrateCards">
+				<p>прокачивайся</p>
+				<div class="containerUpgradeCards">
+					<div class="card" id="clickFullEnergy">
+						<div class="imageCard">
+							<p>ур.<span id="lvlFullEnergy" class="lvlFullEnergy">0</span></p>
+						</div>
+						<p class="textCard">Запас энергии</p>
+					</div>
+					<div class="card" id="clickCountClick">
+						<div class="imageCard">
+							<p>ур.<span id="lvlCountClick">0</span></p>
+						</div>
+						<p class="textCard">Сила клика</p>
+					</div>
+					<div class="card" id="clickRestart">
+						<div class="imageCard">
+							<p><span id="lvlRestart" class="lvlRestart">0</span>/6</p>
+						</div>
+						<p class="textCard">Перезагрузка</p>
+					</div>
+				</div>
+			</div>
+			<div class="upgrateCards">
+				<p class="caption">Пасивный доход</p>
+				<div class="passiveContainer">
+					<div class="card cardPassive" data-id="1"></div>
+					<div class="card cardPassive" data-id="2"></div>
+					<div class="card cardPassive" data-id="3"></div>
+					<div class="card cardPassive" data-id="4"></div>
+					<div class="card cardPassive" data-id="5"></div>
+				</div>
+			</div>
+		</div>
+      
+		<div class="menuPanel">
+			<a href="index.html" class="menuText"
+				><div class="menuButton">
+					<img src="pngwing.com (1).png" />
+					<p>играть</p>
+				</div></a
+			>
+			<a href="#" class="menuText"
+				><div class="menuButton">
+					<img src="pngwing.com (2).png" />
+					<p>доход</p>
+				</div></a
+			>
+			<a href="#" class="menuText"
+				><div class="menuButton">
+					<img src="pngwing.com (5).png" />
+					<p>Призы</p>
+				</div></a
+			>
+			<a href="command.html" class="menuText"
+				><div class="menuButton">
+					<img src="pngwing.com (6).png" />
+					<p>команда</p>
+				</div></a
+			>
+		</div>
+		<dialog id="screenlvlEnergy" class="dialog">
+			<form method="dialog">
+				<button class="closeButton">X</button>
+				<img class="icons8-энергия-48" src="icons8-энергия-48.png">
+				<h2>Запас энергии</h2>
+				<div class="textContainer">
+          <p>ур.<span class="lvlFullEnergy">0</span></p>
+					<img src="icons8-энергия-48.png">
+					<p>+<span id="countEnergy">100</span></p>
+				</div>
+				<button class="pay" id="payLvlEnergy"><p>Купить за <span id="priceLvlEnergy">300</span></p></button>
+			</form>
+		</dialog>
+		<dialog id="screenRestart" class="dialog">
+			<form method="dialog">
+				<button class="closeButton">X</button>
+				<img class="icons8-энергия-48" src="icons8-перезагрузка-100.png">
+				<h2>Перезагрузка</h2>
+				<div class="textContainer">
+          <p><span class="lvlRestart" class="lvlRestart">0</span>/6</p>
+					<img src="icons8-энергия-48.png">
+					<p></p>
+				</div>
+				<button class="pay" id="payLvlRestart"><p>Бесплатно</p></button>
+				
+			</form>
+		</dialog>
+		<dialog class="dialog" id="screenPassive"></dialog>
+<script src="scripts.js"></script>
+</html>
+</body>

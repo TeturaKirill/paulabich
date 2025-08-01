@@ -1,0 +1,280 @@
+.bodyIndex {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 20% 68% 12%;
+	/*background-image: url(icons8-хомяк-64 (5).png""); если картинка на фоне*/
+	background-color: rgb(233, 180, 101);
+}
+.bodyCommand {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 88% 12%;
+	background-color: rgb(233, 180, 101);
+}
+.commandPanel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.objectPanel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.objectPanel img {
+	width: 70%;
+}
+.menuPanel {
+	display: flex;
+	justify-content: center;
+}
+.menuButton img {
+	width: auto;
+	height: 60px;
+}
+.menuButton {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.menuText {
+	text-decoration: none;
+	color: azure;
+	font-family: MyFont;
+}
+
+@font-face {
+	font-family: MyFont;
+	src: url(Montserrat-VariableFont_wght.ttf);
+}
+.topScorPanel {
+	height: 60%;
+}
+.energy {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.energy img {
+	width: 50px;
+	position: relative;
+	left: 24px;
+	z-index: 5;
+}
+#energyBox {
+	width: 100px;
+	height: 20px;
+	border-radius: 4px;
+	background-color: coral;
+	color: azure;
+	font-weight: 700;
+	font-style: italic;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#energyFill {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	border-radius: 4px;
+	background: linear-gradient(
+		90deg,
+		rgb(205, 216, 49) 0%,
+		rgb(194, 83, 83) 100%
+	);
+}
+#energyText {
+	z-index: 5;
+}
+.centreScorePanel {
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.centerScorePanel img {
+	width: 40px;
+}
+#score {
+	font-size: 36px;
+	color: aliceblue;
+	font-weight: 800;
+	margin-left: 10px;
+}
+.bottomScorePanel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	margin: 10px;
+	color: rgb(63, 55, 49);
+	font-weight: 600;
+}
+.plus {
+	position: absolute;
+	color: rgb(255, 0, 0);
+	font-size: 18px;
+	font-weight: 600;
+	animation: moveUp 2s forwards;
+}
+@keyframes moveUp {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+}
+.upgrateCards {
+	width: calc(100vw - 40px); /*!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	padding: 20px;
+}
+.caption {
+	font-size: 17px;
+	font-size: 700;
+	font-family: MyFont;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.card {
+	width: 30%;
+	height: 125px;
+	background-color: rgb(248, 122, 38);
+	border-radius: 10px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-family: MyFont;
+	color: aliceblue;
+	font-size: 13px;
+}
+.containerUpgradeCards {
+	display: flex;
+	justify-content: space-between;
+}
+.imageCard {
+	width: 90%;
+	margin-left: 5%;
+	height: 100px;
+	border-radius: 10px;
+	margin-top: 4%;
+}
+.imageCard p {
+	background-color: rgba(169, 169, 169, 0.884);
+	width: 40px;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
+
+.card:nth-child(1) .imageCard {
+	background-image: url(icons8-энергия-48.png);
+	background-size: cover;
+}
+.card:nth-child(2) .imageCard {
+	background-image: url(icons8-курсор-50.png);
+	background-size: cover;
+}
+.card:nth-child(3) .imageCard {
+	background-image: url(icons8-перезагрузка-100.png);
+	background-size: cover;
+}
+.dialog {
+	position: fixed;
+	inset: auto 0 0 0;
+	border: 2px solid rgba(rgb(75, 190, 22));
+	width: calc(100% - 44px);
+	height: 70vh;
+	border-radius: 20px 20px 0 0;
+	background-color: forestgreen;
+	padding: 20px;
+}
+.imgDialog {
+	width: 80%;
+	height: 30%;
+	border-radius: 20px;
+}
+.textContainer img {
+	width: 20px;
+	margin-left: 20px;
+}
+form {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.closeButton {
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	border-radius: 50px;
+	background-color: aquamarine;
+	border: 0px;
+	font-size: 16px;
+	align-self: flex-end;
+}
+form h2 {
+	font-family: MyFont;
+}
+.textContainer {
+	display: flex;
+	background-color: seagreen;
+	border-radius: 5px;
+	width: 45%;
+	justify-content: center;
+	align-items: center;
+	color: aliceblue;
+	font-size: 17px;
+}
+.pay {
+	width: 90%;
+	height: 7vh;
+	background-color: aquamarine;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0px;
+	border-radius: 20px;
+}
+::backdrop {
+	background-color: rgba(167, 167, 167, 0.514);
+}
+.passiveContainer {
+	width: calc(100vw - 40px); /*!!!!!!!!!!!!!!!!!!!!!!*/
+	white-space: nowrap;
+	overflow-x: auto;
+}
+.cardPassive {
+	display: inline-block;
+	margin-right: 10px;
+}
+.passiveContainer::-webkit-scrollbar {
+	display: none;
+}
